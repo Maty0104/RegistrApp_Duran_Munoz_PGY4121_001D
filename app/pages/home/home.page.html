@@ -1,0 +1,31 @@
+<body>
+<ion-header [translucent]="true">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-buttons style="color: black;" slot="start">
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color: black; margin-left: -1cm;">RegisterApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="assets/Logo.jpg" style="max-width: 100%; height: auto; margin-top: 1cm; margin-bottom: 0.5cm;">
+    
+    <ion-text>
+      <h5 style="color: black; font-family: cursive;">Bienvenido Estudiante {{ getNameFromSession() }} {{ getLastNameFromSession() }} a la plataforma RegisterApp</h5>
+    </ion-text>
+  </div>
+
+
+  <ion-button style="margin-left:0.5cm ; margin-right: 0.5cm; margin-top: 5cm; font-family: cursive;" class="botones" routerLink="/escanear"  expand="block" shape="round">
+    Escanear QR
+  </ion-button>
+
+</ion-content>
+
+</body>

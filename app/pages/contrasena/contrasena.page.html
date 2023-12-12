@@ -1,0 +1,42 @@
+<body>
+<ion-header [translucent]="true">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="back" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color: black; margin-left: -1cm;">Restablecer Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="contrasenaForm">
+
+    <ion-item fill="outline">
+      <ion-label position="floating" style="background-color: white; color: black;">Email</ion-label>
+      <ion-input type="email" formControlName="email" placeholder="Ingrese su Email..."></ion-input>
+    </ion-item>
+
+    <div *ngIf="contrasenaForm.get('username')?.invalid && (contrasenaForm.get('email')?.dirty || contrasenaForm.get('email')?.touched)">
+      <div  style="color: red" *ngIf="contrasenaForm.get('email')?.hasError('required')">
+        *Email es requerido
+      </div>
+      <div  style="color: red" *ngIf="contrasenaForm.get('email')?.hasError('minlength')">
+        *Email minimo de 8 caracteres
+      </div>
+      <div  style="color: red" *ngIf="contrasenaForm.get('email')?.hasError('email')">
+        *El parametro tiene que ser de tipo email
+      </div>
+    </div>
+
+
+
+
+    <ion-button class="botones" (click)="login()" [disabled]="!contrasenaForm.valid" [routerLink]="['/actualizarcontrasena', usuario.id]" expand="block"  style="margin-left:0.5cm ; margin-right: 0.5cm; margin-top: 0.5cm; font-family: cursive;">
+      ingresar correo
+    </ion-button>
+  </form>
+</ion-content>
+
+</body>

@@ -1,0 +1,53 @@
+<body>
+  
+<ion-header [translucent]="true">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="back" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color: black; margin-left: -1cm;">RegisterApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <h1  class="ion-text-center" style="color: black; margin-left: -1cm;">Perfil de usuario</h1>
+  <ion-card *ngIf="role === 'Profesor'">
+    <ion-card-header>
+      <ion-card-title>Nombre: {{ usuario.nombre && usuario.apellido ? usuario.nombre + ' ' + usuario.apellido : '' }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <span>Username: {{ usuario.username }} </span>
+      <br>
+      <span>Email: {{ usuario.email }} </span>
+      <br>
+      <span>Primera asignatura: {{ usuario.materiauno }} </span>
+      <br>
+      <span>Segunda asignatura: {{ usuario.materiados }} </span>
+      <br>
+      <span>Semestre: {{ usuario.semestre }} </span>
+      <br>
+      <span>Horas trabajadas: {{ usuario.horas }} </span>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="role === 'Estudiante'">
+    <ion-card-header>
+      <ion-card-title>Nombre: {{ usuario.nombre && usuario.apellido ? usuario.nombre + ' ' + usuario.apellido : '' }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <span>Username: {{ usuario.username }} </span>
+      <br>
+      <span>Email: {{ usuario.email }} </span>
+      <br>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button [routerLink]="['/actualizar-perfil', usuario.id]" >Actualizar Datos</ion-button>
+</ion-content>
+
+</body>

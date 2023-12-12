@@ -1,0 +1,44 @@
+<body>
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-buttons style="color: black; " slot="start">
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color: black; margin-left: -1cm;">RegisterApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+  
+<ion-content class="ion-padding ion-text-center">
+    <img src="assets/Logo.jpg" style="margin-top: 1cm; margin-bottom: 1cm;">
+  <p  style="color: black; font-family: cursive; text-align: center;">Bienvenido Docente {{ getNameFromSession() }} {{ getLastNameFromSession() }} </p>
+  
+  
+  <form [formGroup]="qrForm">
+    
+    <ion-item>
+      <ion-select formControlName="materia" placeholder="Seleccione la asignatura a registrar asistencia">
+        <ion-select-option *ngFor="let materia of materias" [value]="materia.value">{{ materia.label }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-card class="ion-text-center" *ngIf="mensaje">
+      <ion-card-content>
+        <qrcode [qrdata]="mensaje" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-button
+      class="botones" style="margin-left:0.5cm ; margin-right: 0.5cm; margin-top: 0.5cm; font-family: cursive;" (click)="generarQr()" expand="block" shape="round" [disabled]="!qrForm.valid">
+      Generar Qr
+    </ion-button>
+  </form>
+
+</ion-content>
+
+</body>

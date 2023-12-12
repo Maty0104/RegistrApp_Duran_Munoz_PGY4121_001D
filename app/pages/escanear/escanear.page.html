@@ -1,0 +1,34 @@
+<body>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="white">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"
+          text="back"
+           style="color: black;"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center" style="color: black; margin-left: -2cm;">RegisterApp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <img src="assets/Logo.jpg" style="max-width: 100%; height: auto; margin-top: 1cm; margin-bottom: 0.5cm;">
+      <div class="button-container">
+        <ion-button (click)="tomarFoto()" expand="block" >+</ion-button>
+        <div *ngIf="this.foto">
+          <img src="{{this.foto}}" >
+        </div>
+      </div>
+    </div>
+    
+  
+    <ion-text>
+      <h5 style=" color: black; text-align: center; font-family: cursive; margin-top: 2cm;">Pulse para activar la camara</h5>
+    </ion-text>
+  
+  </ion-content>
+
+  
+
+</body>

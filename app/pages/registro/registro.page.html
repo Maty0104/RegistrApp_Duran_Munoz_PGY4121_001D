@@ -1,0 +1,100 @@
+<body>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="white">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="back" style="color: black;"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center" style="color: black; margin-left: -2.3cm;">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-content>
+
+      <ion-text>
+        <h5 style="background-color: white; color: rgb(0, 0, 0); text-align: center; font-family: cursive; margin-bottom: 5pxcm;">
+          Registro de usuario
+        </h5>
+      </ion-text>
+
+      <form [formGroup]="registrationForm" (ngSubmit)="crearUsuario()">
+        <ion-list style="background-color: white;">
+          <div class="login">
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Username</ion-label>
+              <ion-input formControlName="username" placeholder="Ingrese Nombre de usuario..."></ion-input>
+            </ion-item>
+
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Nombre</ion-label>
+              <ion-input formControlName="nombre" placeholder="Ingrese su nombre..."></ion-input>
+            </ion-item>
+
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Apellido</ion-label>
+              <ion-input formControlName="apellido" placeholder="Ingrese su apellido..."></ion-input>
+            </ion-item>
+
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Contraseña</ion-label>
+              <ion-input type="password" formControlName="password" placeholder="@#%>?_^$"></ion-input>
+            </ion-item>
+
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Email</ion-label>
+              <ion-input type="email" formControlName="email" placeholder="duocino@duoc.cl"></ion-input>
+              <ion-note slot="error">Ingrese un email válido</ion-note>
+            </ion-item>
+
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Año academico</ion-label>
+              <ion-input formControlName="anacademico" placeholder="2023"></ion-input>
+              <ion-note color="danger" *ngIf="registrationForm?.get('anacademico')?.hasError('CaracterInvalid')">
+                Debe contener solo números.
+              </ion-note>
+              <ion-note color="danger" *ngIf="registrationForm?.get('anacademico')?.hasError('FueraRango')">
+                Debe ser mayor al año 2019
+              </ion-note>
+
+            
+              
+            </ion-item>
+            
+
+            <ion-item fill="outline">
+              <ion-label position="floating" style="background-color: white; color: black;">Semestre</ion-label>
+              <ion-input formControlName="semestre" placeholder="04-16"></ion-input>
+              <ion-note color="danger" *ngIf="registrationForm?.get('semestre')?.hasError('RangoError')">
+                El semestre debe estar en el rango 04-16.
+              </ion-note>
+            </ion-item>
+
+            <ion-item>
+              <ion-select formControlName="role" placeholder="Selecciona tu rol">
+                <ion-select-option *ngFor="let role of roles " [value]="role.value">{{ role.label }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-select formControlName="materiauno" placeholder="Selecciona tu primera asignatura">
+                <ion-select-option *ngFor="let materia of materias" [value]="materia.value">{{ materia.label }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+  
+            <ion-item>
+              <ion-select formControlName="materiados" placeholder="Selecciona tu segunda asignatura">
+                <ion-select-option *ngFor="let materia of materias" [value]="materia.value">{{ materia.label }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-button class="botones" type="submit" expand="block" style="margin: 1cm; font-family: cursive;" [disabled]="!registrationForm.valid">
+              Registrarse
+            </ion-button>
+            
+          </div>
+        </ion-list>
+      </form>
+
+    </ion-content>
+  </ion-content>
+</body>

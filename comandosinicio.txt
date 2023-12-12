@@ -1,0 +1,13 @@
+COMANDOS DE INICIO:
+------------------------------
+poner en el cmd del escritorio
+1- npm uninstall -g ionic
+2- npm install -g @ionic/cli@6
+3- ionic start MyApp blank
+---------------------------
+4- carpeta data: npm install -g json-server
+5- carpeta data: json-server --watch usuarios.json --host 0.0.0.0 --port 3300
+6- carpeta MyApp:npm install @capacitor/camera (sino funciona poner "npm install --force @capacitor/camera")
+7- carpeta MyApp: npm i @ionic/pwa-elements(sino funciona poner "npm i --force @ionic/pwa-elements")
+6- carpeta de MyApp :ionic serve
+--------------------------------

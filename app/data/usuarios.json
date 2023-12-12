@@ -1,0 +1,168 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "role": "Estudiante",
+      "nombre": " kevin",
+      "apellido": " munoz",
+      "username": "ke.munozc",
+      "email": " ke.munozc@duoc.cl",
+      "password": "password",
+      "materiauno": "Calidad De Software",
+      "materiados": "Arquitectura En Software",
+      "semestre": "1",
+      "anacademico": "2023"
+    },
+    {
+      "username": "pepito",
+      "nombre": "pepe",
+      "apellido": "tapia",
+      "password": "pepepipo",
+      "email": "pepe@pepa.cl",
+      "anacademico": "2023",
+      "semestre": "08",
+      "materiauno": "Calidad De Software",
+      "materiados": "Aplicaciones Móviles",
+      "role": "Estudiante",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "role": "Estudiante",
+      "nombre": "matias ",
+      "apellido": "duran",
+      "username": "ma.durana",
+      "email": "ma.durana@duoc.cl",
+      "password": "matiasduoc2023",
+      "materiauno": "Aplicaciones Móviles",
+      "materiados": "Modelamiento Base de datos",
+      "semestre": "04",
+      "anacademico": "2023"
+    },
+    {
+      "username": "alex.agui",
+      "nombre": "alex",
+      "apellido": "aguilera",
+      "password": "1234",
+      "email": "alex.agui@duoc.cl",
+      "anacademico": "2023",
+      "semestre": "16",
+      "materiauno": "CDS",
+      "materiados": "Arquitectura En Software",
+      "role": "Profesor",
+      "id": 4
+    }
+  ],
+  "asistencias": [
+    {
+      "nombre": "Alex",
+      "apellido": "Aguilera",
+      "asistencia": "Se ha realizado exitosamente su registro de asistencia del \"19/11/2023\" para la asignatura \"Calidad de Software\" ",
+      "materia": "Calidad de Software",
+      "id": 1
+    },
+    {
+      "nombre": "Alex",
+      "apellido": "Aguilera",
+      "asistencia": "Se ha realizado exitosamente su registro de asistencia del \"22/11/2023\" para la asignatura \"Aplicaciones Móviles\" ",
+      "materia": "Aplicaciones Móviles",
+      "id": 2
+    },
+    {
+      "nombre": "Alex",
+      "apellido": "Aguilera",
+      "asistencia": "Se ha realizado exitosamente su registro de asistencia del \"12/12/2023\" para la asignatura \"Modelamiento Base de datos\" ",
+      "materia": "Modelamiento Base de datos",
+      "id": 3
+    },
+    {
+      "nombre": "Alex",
+      "apellido": "Aguilera",
+      "asistencia": "Se ha realizado exitosamente su registro de asistencia del \"12/12/2023\" para la asignatura \"Aplicaciones Móviles\" ",
+      "materia": "Aplicaciones Móviles",
+      "id": 4
+    }
+  ],
+  "fechas": [
+    {
+      "id": 1,
+      "fechnombre": "feriado semana santa",
+      "fechainic": "28/03/23",
+      "fechaterm": "30/03/23",
+      "fechsemestre": "1",
+      "fechdescripcion": "La Semana Santas la conmemoración cristiana anual de la Pasión de Cristo,es decir, de la entrada a Jerusalén, la última cena, el viacrucis, la muerte y resurrección de Jesús de Nazaret."
+    },
+    {
+      "id": 2,
+      "fechnombre": "feriado día del trabajador",
+      "fechainic": "01/05/23",
+      "fechaterm": "01/05/23",
+      "fechsemestre": "1",
+      "fechdescripcion": "Inspirados en el hito de los mártires, los movimientos de trabajadores en Chile conmemoraban esa fecha y exigían al gobierno que se estableciera como día feriado, al igual como sucedía con el resto del mundo, cuestión que no sucedió hasta 1931."
+    },
+    {
+      "id": 3,
+      "fechnombre": "Dia de las glorias navales ",
+      "fechainic": "21/05/23",
+      "fechaterm": "21/05/23",
+      "fechsemestre": "1",
+      "fechdescripcion": "recuerda y conmemora el Combate Naval de Iquique."
+    },
+    {
+      "id": 4,
+      "fechnombre": "feriado día nacional de los pueblos indígenas",
+      "fechainic": "20/06/23",
+      "fechaterm": "20/06/23",
+      "fechsemestre": "1",
+      "fechdescripcion": "Este feriado legal es un reconocimiento histórico para los pueblos originarios para así relevar la importancia de sus culturas, sus lenguas y tradiciones."
+    },
+    {
+      "id": 5,
+      "fechnombre": "feriado San pedro y san pablo",
+      "fechainic": "29/06/23",
+      "fechaterm": "29/06/23",
+      "fechsemestre": "1",
+      "fechdescripcion": "Este feriado corresponde al aniversario de sus muertes o del traslado de sus reliquias."
+    },
+    {
+      "id": 6,
+      "fechnombre": "feriado día del Carmen",
+      "fechainic": "16/07/23",
+      "fechaterm": "16/17/23",
+      "fechsemestre": "1",
+      "fechdescripcion": "Se honra y celebra a la Virgen del Carmen."
+    },
+    {
+      "id": 7,
+      "fechnombre": "feriado Día asuncion de la virgen",
+      "fechainic": "15/08/23",
+      "fechaterm": "15/08/23",
+      "fechsemestre": "2",
+      "fechdescripcion": "La celebración de la Asunción rememora que la madre de Jesús fue llevada al cielo en cuerpo y alma por los ángeles de Dios"
+    },
+    {
+      "id": 8,
+      "fechnombre": "feriado Visperas de fiesas patrias",
+      "fechainic": "17/09/23",
+      "fechaterm": "19/09/23",
+      "fechsemestre": "2",
+      "fechdescripcion": "Este feriado se conmemora a la dia se se crea la acta de la idependencia de chile ."
+    },
+    {
+      "id": 9,
+      "fechnombre": "feriado Día de las iglesias evangelicas y protestantes",
+      "fechainic": "31/10/23",
+      "fechaterm": "31/11/23",
+      "fechsemestre": "2",
+      "fechdescripcion": "Este feriado se conmemora el dia que el monje alemán Martín Lutero clavó en la iglesia del palacio de Wittenberg el documento de las 95 tesis, la cual dio inicio a la Reforma Protestante en 1517."
+    },
+    {
+      "id": 10,
+      "fechnombre": "feriado Día de todos los santos",
+      "fechainic": "01/11/23",
+      "fechaterm": "01/11/23",
+      "fechsemestre": "2",
+      "fechdescripcion": "Este feriado dedicada a las reliquias de los Santos Apóstoles y de todos los santos mártires y confesores."
+    }
+  ]
+}

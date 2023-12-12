@@ -1,0 +1,21 @@
+<body>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="white">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home" text="back" style="color: black;"></ion-back-button>
+      </ion-buttons>
+      <ion-title style="color: black; margin-left: 2cm;">Feriados</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content style="background-color: white;" [fullscreen]="true">
+    <div class="grid-container">
+      <ion-card *ngFor="let a of fechas" [routerLink]="['/detalle', a.id]" class="grid-item">
+        <ion-card-content>
+          <ion-card-title>{{a['fechnombre']}}</ion-card-title>
+          <ion-card-subtitle>{{a['fechaterm']}}</ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+</body>

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ID #{{fecha.id}}</ion-card-subtitle>
+      <ion-card-title>Nombre: {{fecha.fechnombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Fecha Inicio: {{fecha.fechainic}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fecha Termino: {{fecha.fechaterm}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Semestre: {{fecha.fechsemestre}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Descripción: {{fecha.fechdescripcion}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

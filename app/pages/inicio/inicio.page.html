@@ -1,0 +1,71 @@
+<body>
+<ion-header [translucent]="true">
+  <ion-toolbar  color="white">
+    <ion-title style="color: black; text-align: center;">RegisterApp</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <img src="assets/Logo.jpg" style="display: block; margin: 0 auto; margin-top: 1cm; margin-bottom: 1.5cm; max-width: 100%; height: auto;">
+  <ion-text>
+    <h5 style=" color: black; text-align: center; font-family: cursive;">Bienvenido, por favor inicia sesion</h5>
+  </ion-text>
+
+  <form [formGroup] = "loginForm">
+
+    <ion-list style="background-color: white;">
+      <div class="botones">
+
+      <ion-item fill="outline">
+        <ion-label position="floating" style="background-color: white; color: black;">Usuario</ion-label>
+        <ion-input type="text" formControlName="username" placeholder="Ingrese su nombre de usuario..."></ion-input>
+      </ion-item>
+
+      <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+        <div  style="color: red" *ngIf="loginForm.get('username')?.hasError('required')">
+          *Username es requerido
+        </div>
+        <div  style="color: red" *ngIf="loginForm.get('username')?.hasError('minlength=2')">
+          *Username minimo de 4 caracteres
+        </div>
+      </div>
+
+
+      <ion-item fill="outline">
+        <ion-label position="floating" style="background-color: white; color: black;">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password" placeholder="Enter text"></ion-input>
+      </ion-item>
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('username')?.touched)">
+        <div  style="color: red" *ngIf="loginForm.get('password')?.hasError('required')">
+          *Password es requerido
+        </div>
+        <div  style="color: red" *ngIf="loginForm.get('password')?.hasError('minlength')">
+          *Password minimo de 4 caracteres
+        </div>
+      </div>
+
+    </div>
+    </ion-list>
+    
+    <ion-button class="botones" (click)="login()" [disabled]="!loginForm.valid" expand="block" style="margin-left:0.5cm ; margin-right: 0.5cm; margin-top: 0.5cm; font-family: cursive;">
+      Iniciar Sesion
+    </ion-button>
+
+    <ion-button class="botones" routerLink="/registro" expand="block" style= "margin-left:0.5cm ; margin-right: 0.5cm; margin-top: 0.5cm; font-family: cursive;">
+      registrarse
+    </ion-button>
+
+    <ion-button class="botones" routerLink="/contrasena" expand="block" style= "margin-left:0.5cm ; margin-right: 0.5cm; margin-top: 0.5cm; font-family: cursive;">
+      Restablecer Contraseña
+    </ion-button>
+    
+    <ion-header collapse="condense">
+    </ion-header>
+
+  </form>
+
+
+</ion-content>
+</body>
